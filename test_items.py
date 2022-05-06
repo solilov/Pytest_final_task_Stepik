@@ -1,5 +1,3 @@
-import time
-
 from selenium.webdriver.common.by import By
 
 
@@ -12,7 +10,6 @@ def test_сhecking_for_a_button(browser):
         By.XPATH,
         '//button[@class="btn btn-lg btn-primary btn-add-to-basket"]'
     )
-    time.sleep(10)
     if not button:
         assert button, (
             'The button is missing, check if the element search selector is correct'
