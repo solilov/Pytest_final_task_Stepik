@@ -17,6 +17,11 @@ def browser(request):
         'prefs',
         {'intl.accept_languages': user_language}
     )
+    if user_language != None:
+        browser = webdriver.Chrome(options=options)
+
+    else:
+        raise pytest.UsageError("--don't choose language")
     browser = webdriver.Chrome(options=options)
     yield browser
     browser.quit()
