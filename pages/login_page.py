@@ -20,4 +20,3 @@ class LoginPage(BasePage):
         assert self.is_element_present(
             *LoginPageLocators.REGISTER_FORM
         ), 'Register form is not found'
-
