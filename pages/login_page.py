@@ -32,4 +32,6 @@ class LoginPage(BasePage):
         btn_reg.click()
 
     def user_login_to_account(self):
-        assert self.is_element_present(*LoginPageLocators.LOG_OUT), "User is not logged it"
+        assert self.is_element_present(
+            *LoginPageLocators.LOG_OUT
+        ), "User is not logged it"
